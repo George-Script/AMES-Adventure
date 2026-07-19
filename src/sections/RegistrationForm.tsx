@@ -5,7 +5,7 @@ import Section from "../components/ui/Section";
 import Container from "../components/ui/Container";
 
 // Custom Formspree endpoint
-const FORM_ENDPOINT = "https://formspree.io/f/mdaqgvjo";
+const FORM_ENDPOINT = "https://formspree.io/f/mwvgbepg";
 
 const WHATSAPP_GROUP_LINK = "https://chat.whatsapp.com/LYMCb0MsMJWDsGyM3kIIeJ";
 
