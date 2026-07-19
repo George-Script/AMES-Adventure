@@ -21,6 +21,8 @@ const departments = ["Mechanical Engineering", "Other"];
 
 const levels = ["Level 100", "Level 200", "Level 300", "Level 400"];
 
+const WHATSAPP_GROUP_LINK = "https://chat.whatsapp.com/LYMCb0MsMJWDsGyM3kIIeJ";
+
 export default function RegistrationForm() {
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
@@ -152,14 +154,39 @@ export default function RegistrationForm() {
               </div>
 
               <h2 className="mt-10 font-display text-5xl font-black">
-                Application Received
+                You're On The List
               </h2>
 
               <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-ink-60">
-                Your application has entered review. Selected applicants will
-                receive confirmation through WhatsApp and instructions for seat
-                activation.
+                Your details have been recorded. Join the WhatsApp group below
+                for updates, then reach the organizers to complete your GHS 250
+                payment and confirm your seat.
               </p>
+
+              <a
+                href={WHATSAPP_GROUP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  transition-premium
+                  mt-10
+                  inline-flex
+                  items-center
+                  gap-3
+                  rounded-[var(--radius-lg)]
+                  bg-accent
+                  px-8
+                  py-5
+                  font-sora
+                  text-lg
+                  font-bold
+                  text-text
+                  shadow-floating
+                  hover:-translate-y-1
+                "
+              >
+                Join The WhatsApp Group
+              </a>
             </div>
           ) : (
             <>
