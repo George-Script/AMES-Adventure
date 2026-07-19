@@ -9,6 +9,7 @@ interface FormData {
   whatsappNumber: string;
   email: string;
   department: string;
+  otherProgramme: string;
   level: string;
   reason: string;
 }
@@ -34,6 +35,7 @@ export default function RegistrationForm() {
     whatsappNumber: "",
     email: "",
     department: departments[0],
+    otherProgramme: "",
     level: levels[0],
     reason: "",
   });
@@ -80,6 +82,10 @@ export default function RegistrationForm() {
 
         body: JSON.stringify({
           ...formData,
+          programme:
+            formData.department === "Other" && formData.otherProgramme.trim()
+              ? formData.otherProgramme
+              : formData.department,
           submittedAt: new Date().toISOString(),
         }),
       });
@@ -307,9 +313,22 @@ export default function RegistrationForm() {
                           className={input}
                         >
                           {departments.map((dept) => (
-                            <option key={dept}>{dept}</option>
+                            <option key={dept} value={dept}>
+                              {dept}
+                            </option>
                           ))}
                         </select>
+
+                        {formData.department === "Other" && (
+                          <input
+                            type="text"
+                            name="otherProgramme"
+                            value={formData.otherProgramme}
+                            onChange={update}
+                            placeholder="Enter your programme (Optional)"
+                            className={input}
+                          />
+                        )}
 
                         <select
                           name="level"
@@ -318,7 +337,9 @@ export default function RegistrationForm() {
                           className={input}
                         >
                           {levels.map((lvl) => (
-                            <option key={lvl}>{lvl}</option>
+                            <option key={lvl} value={lvl}>
+                              {lvl}
+                            </option>
                           ))}
                         </select>
                       </div>
