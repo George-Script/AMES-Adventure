@@ -17,14 +17,7 @@ const totalSteps = 3;
 
 const progressTitles = ["Personal", "Academic", "Motivation"];
 
-const departments = [
-  "Petroleum Engineering",
-  "Chemical Engineering",
-  "Natural Gas Engineering",
-  "Petroleum Geoscience",
-  "Petroleum Refining & Petrochemicals",
-  "Other",
-];
+const departments = ["Mechanical Engineering", "Other"];
 
 const levels = ["Level 100", "Level 200", "Level 300", "Level 400"];
 
