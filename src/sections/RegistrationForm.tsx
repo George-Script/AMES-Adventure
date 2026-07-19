@@ -171,11 +171,11 @@ export default function RegistrationForm() {
                 </div>
 
                 <h2 className="mt-8 font-display text-5xl font-black md:text-6xl">
-                  Apply For YENKOR WEST
+                  Apply for the AMES Adventure
                 </h2>
 
                 <p className="mt-5 text-base text-ink-60">
-                  Estimated completion time: under 3 minutes
+                  Estimated completion time: under 2 minutes
                 </p>
               </div>
 
@@ -301,16 +301,15 @@ export default function RegistrationForm() {
                       <>
                         <textarea
                           rows={6}
-                          required
                           name="reason"
                           value={formData.reason}
                           onChange={update}
-                          placeholder="Tell us why you should be selected…"
+                          placeholder="What are your expectations for this Adventure?"
                           className={`${input} resize-none`}
                         />
 
                         <p className="mt-4 text-sm text-ink-40">
-                          Authentic responses perform best.
+                          Your response helps us plan this adventure with you.
                         </p>
                       </>
                     )}
